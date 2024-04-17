@@ -47,7 +47,7 @@ body {
 }
 
 #searchIcon {
-  height: calc(1rem + 0.6vw);;
+  height: calc(1rem + 0.6vw);
   width: auto;
   margin-right: 1ch;
 }
@@ -58,6 +58,10 @@ input[type="text"] {
   border-radius: 10px;
   height: 3.2ch;
   width: 100%;
+}
+
+input[type="text"]:hover {
+  background-color: rgb(200, 200, 200);
 }
 
 .headerProfileArea {
@@ -98,12 +102,12 @@ input[type="text"] {
 }
 
 .profileMessage {
-  font-size: calc(0.3rem + 0.6vw);;
+  font-size: calc(0.3rem + 0.6vw);
   font-weight: 600;
 }
 
 .profileNameBig {
-  font-size: calc(1.2rem + 0.6vw);;
+  font-size: calc(1.2rem + 0.6vw);
   font-weight: 800;
 }
 
@@ -114,7 +118,7 @@ input[type="text"] {
 }
 
 .button {
-  width: calc(5.5rem + 0.6vw);;
+  width: calc(5.5rem + 0.6vw);
   height: 50%;
   border-style: none;
   border-radius: 20px;
@@ -122,6 +126,11 @@ input[type="text"] {
   color: var(--themeWhite);
   font-size: 1.2rem;
   font-weight: 800;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: hsl(204, 65%, 60%);
 }
 
 .sidebar {
