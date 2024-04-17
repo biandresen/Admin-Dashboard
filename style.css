@@ -136,6 +136,46 @@ input[type="text"]:hover {
 .sidebar {
   grid-area: sidebar;
   background-color: var(--themeBlue);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.4fr 1.5fr 1fr 1.3fr;
+}
+
+.dashboardHeading, .dbBox {
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.dashboardSection1, .dashboardSection2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3%;
+    margin-top: 1.5%;
+
+}
+
+#dbHeadingText{
+    font-size: calc(1.4rem + 1vw);
+}
+
+#dbHeadingIcon{
+    width: calc(4rem + 0.1vw);
+    height: auto;
+}
+
+.dbIcon{
+    fill: var(--themeWhite);
+    width: calc(1.3rem + 1vw);
+    height: auto;
+}
+
+.dbText{
+    color: var(--themeWhite);
+    font-size: calc(0.8rem + 0.6vw);
+    font-weight: 800;
+    margin-left: 5%;
 }
 
 .content {
