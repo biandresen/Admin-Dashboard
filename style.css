@@ -4,6 +4,7 @@ body {
   margin: 0;
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
   box-sizing: border-box;
   --themeWhite: rgb(255, 255, 255);
   --themeGray: rgb(226, 232, 240);
@@ -18,7 +19,7 @@ body {
   width: 100%;
   background-color: var(--themeGray);
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 0.8fr repeat(4, 1fr);
   grid-template-rows: 1fr 5fr;
   grid-template-areas:
     "sidebar header header header header"
@@ -141,47 +142,153 @@ input[type="text"]:hover {
   grid-template-rows: 0.4fr 1.5fr 1fr 1.3fr;
 }
 
-.dashboardHeading, .dbBox {
+.dashboardHeading,
+.dbBox {
   margin-left: 5%;
   display: flex;
   align-items: center;
 }
 
-.dashboardSection1, .dashboardSection2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 3%;
-    margin-top: 1.5%;
-
+.dashboardSection1,
+.dashboardSection2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3%;
+  margin-top: 1.5%;
 }
 
-#dbHeadingText{
-    font-size: calc(1.4rem + 1vw);
+#dbHeadingText {
+  font-size: calc(1.4rem + 1vw);
 }
 
-#dbHeadingIcon{
-    width: calc(4rem + 0.1vw);
-    height: auto;
+#dbHeadingIcon {
+  width: calc(4rem + 0.1vw);
+  height: auto;
 }
 
-.dbIcon{
-    fill: var(--themeWhite);
-    width: calc(1.3rem + 1vw);
-    height: auto;
+.dbIcon {
+  fill: var(--themeWhite);
+  width: calc(1.3rem + 1vw);
+  height: auto;
 }
 
-.dbText{
-    color: var(--themeWhite);
-    font-size: calc(0.8rem + 0.6vw);
-    font-weight: 800;
-    margin-left: 5%;
+.dbText {
+  color: var(--themeWhite);
+  font-size: calc(0.8rem + 0.6vw);
+  font-weight: 800;
+  margin-left: 5%;
 }
 
 .content {
   grid-area: content;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.25fr 1fr 1fr 1fr 0.25fr;
+}
+
+.projectsHeader {
+  grid-column: 1 / 3;
+  margin: 30px 0 0 2%;
+}
+
+.projectCard {
+  background-color: var(--themeWhite);
+  padding: 0px 2ch;
+  border-left: 8px solid var(--themeYellow);
+  border-radius: 8px;
+  margin: 15px;
+  box-shadow: 0px 5px 10px var(--themeShadow);
+  display: grid;
+  grid-template-rows: 1fr 0.5fr;
+}
+
+.projectCardHeader {
+  margin: 5% 0 0 0;
+}
+
+.projectCardParagraph {
+  margin: 0.5% 0 0 0;
+  color: hsla(0, 0%, 0%, 0.8);
+}
+
+.projectIcons {
+  justify-self: right;
+  display: flex;
+  gap: 12%;
+}
+
+.projectIcon {
+  width: 20%;
+  height: auto;
+  fill: hsla(0, 0%, 0%, 0.7);
 }
 
 .infobar {
   grid-area: infobar;
+  grid-template-rows: 1fr 1fr;
+}
+
+.announcementsHeader {
+  margin: 33px 0 12px 17px;
+}
+
+.announcementsContent {
+  background-color: var(--themeWhite);
+  padding: 0px 2ch;
+  border-radius: 8px;
+  margin: 0 25px 0 15px;
+  box-shadow: 0px 5px 10px var(--themeShadow);
+  display: grid;
+}
+
+.announcementCardHeader {
+  margin: 10px 0 0 0;
+}
+
+.announcementCardParagraph {
+  margin: 0.5% 0 10px 0;
+  color: hsla(0, 0%, 0%, 0.8);
+}
+
+hr {
+  width: 100%;
+  height: 0.01px;
+  margin: 10px 0 10px 0;
+  padding: 0;
+}
+
+.trendingHeader {
+  margin: 30px 0 12px 17px;
+}
+
+.trendingContent {
+  background-color: var(--themeWhite);
+  padding: 0px 2ch;
+  border-radius: 8px;
+  margin: 0 25px 0 15px;
+  box-shadow: 0px 5px 10px var(--themeShadow);
+  display: grid;
+}
+
+.trendingProfile {
+  display: flex;
+  align-items: center;
+  margin: 4% 0 0 0;
+}
+
+.trendingProfile:last-of-type {
+  margin-bottom: 4%;
+}
+
+.trendingText {
+  margin-left: 4%;
+}
+
+.profileTag {
+  font-weight: 800;
+}
+
+.trendingProfileName {
+  color: hsla(0, 0%, 0%, 0.8);
 }
