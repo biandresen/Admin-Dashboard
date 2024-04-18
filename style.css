@@ -6,6 +6,7 @@ body {
   width: 100vw;
   overflow-x: hidden;
   box-sizing: border-box;
+  background-color: var(--themeGray);
   --themeWhite: rgb(255, 255, 255);
   --themeGray: rgb(226, 232, 240);
   --themeBlue: rgb(25, 146, 212);
@@ -19,7 +20,7 @@ body {
   width: 100%;
   background-color: var(--themeGray);
   display: grid;
-  grid-template-columns: 0.8fr repeat(4, 1fr);
+  grid-template-columns: 0.85fr repeat(4, 1fr);
   grid-template-rows: 1fr 5fr;
   grid-template-areas:
     "sidebar header header header header"
@@ -160,6 +161,7 @@ input[type="text"]:hover {
 
 #dbHeadingText {
   font-size: calc(1.4rem + 1vw);
+  margin: 0;
 }
 
 #dbHeadingIcon {
@@ -183,7 +185,7 @@ input[type="text"]:hover {
 .content {
   grid-area: content;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, 1fr);
   grid-template-rows: 0.25fr 1fr 1fr 1fr 0.25fr;
 }
 
@@ -201,6 +203,7 @@ input[type="text"]:hover {
   box-shadow: 0px 5px 10px var(--themeShadow);
   display: grid;
   grid-template-rows: 1fr 0.5fr;
+  height: max(200px);
 }
 
 .projectCardHeader {
@@ -259,7 +262,7 @@ hr {
 }
 
 .trendingHeader {
-  margin: 30px 0 12px 17px;
+  margin: 23px 0 12px 17px;
 }
 
 .trendingContent {
@@ -292,3 +295,21 @@ hr {
 .trendingProfileName {
   color: hsla(0, 0%, 0%, 0.8);
 }
+
+.profileTag,
+.trendingIcon,
+.icon,
+.dbIcon,
+.dbText {
+  cursor: pointer;
+}
+
+.dashboardSection1 > *:hover,
+.dashboardSection2 > *:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transform: scaleX(1.05);
+  transform: scaleX(1.05);
+  transition: ease 0.3s;
+}
+
