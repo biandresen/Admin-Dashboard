@@ -319,8 +319,7 @@ hr {
     width: 100%;
     background-color: var(--themeGray);
     display: grid;
-    grid-template-columns: 0.85fr repeat(4, 1fr);
-    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
       "header"
       "sidebar"
@@ -329,6 +328,7 @@ hr {
   }
 
   .header {
+    width: 100%;
     display: flex;
     flex-direction: column;
     height: 75px;
@@ -340,7 +340,7 @@ hr {
   }
 
   #notificationIcon {
-    width: 20%;
+    width: calc(1rem + 2vw);
   }
 
   .headerProfileArea {
@@ -361,21 +361,15 @@ hr {
 
   .button {
     width: calc(3.5rem + 0.6vw);
-    height: 50%;
-    border-style: none;
-    border-radius: 20px;
-    background-color: var(--themeBlue);
-    color: var(--themeWhite);
+    height: calc(1rem + 0.6vw);
     font-size: 0.75rem;
-    font-weight: 800;
   }
 
   .sidebar {
-    grid-area: sidebar;
-    background-color: var(--themeBlue);
     display: flex;
     position: fixed;
     justify-content: center;
+    align-content: center;
     width: 100%;
     top: 70px;
   }
@@ -405,25 +399,13 @@ hr {
   .content {
     grid-area: content;
     display: grid;
-    grid-template-columns: minmax(auto-fit, 1fr);
+    grid-template-columns: minmax(auto-fit, minmax(300px, 1fr));
+    grid-auto-columns: 1fr;
   }
 
   .projectsHeader {
     grid-column: 1 / 3;
     margin: 120px 0 5px 20px;
-  }
-
-  .projectCard {
-    background-color: var(--themeWhite);
-    padding: 0px 2ch;
-    border-left: 8px solid var(--themeYellow);
-    border-radius: 8px;
-    margin: 15px;
-    box-shadow: 0px 5px 10px var(--themeShadow);
-    display: grid;
-    grid-template-rows: 1fr 0.5fr;
-    height: max(200px);
-    width: min(100px);
   }
 
   .projectText{
