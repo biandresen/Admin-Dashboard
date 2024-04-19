@@ -277,7 +277,7 @@ hr {
 .trendingProfile {
   display: flex;
   align-items: center;
-  margin: 4% 0 0 0;
+  margin: 6% 0 0 0;
 }
 
 .trendingProfile:last-of-type {
