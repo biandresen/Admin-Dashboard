@@ -313,3 +313,128 @@ hr {
   transition: ease 0.3s;
 }
 
+@media only screen and (max-width: 800px) {
+  .container {
+    height: 100%;
+    width: 100%;
+    background-color: var(--themeGray);
+    display: grid;
+    grid-template-columns: 0.85fr repeat(4, 1fr);
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content"
+      "infobar";
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    height: 75px;
+    position: fixed;
+  }
+
+  .headerSearchArea {
+    width: 85%;
+  }
+
+  #notificationIcon {
+    width: 20%;
+  }
+
+  .headerProfileArea {
+    position: relative;
+    right: 20px;
+  }
+
+  .headerProfileDisplayArea {
+    display: none;
+  }
+
+  .buttonArea {
+    width: 100%;
+    grid-column: 1 / 3;
+    display: flex;
+    margin: 1%;
+  }
+
+  .button {
+    width: calc(3.5rem + 0.6vw);
+    height: 50%;
+    border-style: none;
+    border-radius: 20px;
+    background-color: var(--themeBlue);
+    color: var(--themeWhite);
+    font-size: 0.75rem;
+    font-weight: 800;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    background-color: var(--themeBlue);
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    top: 70px;
+  }
+
+  .dashboardHeading {
+    display: none;
+  }
+
+  .dashboardSection1,
+  .dashboardSection2 {
+    flex-direction: row;
+    justify-items: end;
+    margin-top: 1.5%;
+    position: relative;
+    right: 8px;
+  }
+
+  .dashboardSection2 {
+    position: relative;
+    left: 40px;
+  }
+
+  .dbText {
+    display: none;
+  }
+
+  .content {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: minmax(auto-fit, 1fr);
+  }
+
+  .projectsHeader {
+    grid-column: 1 / 3;
+    margin: 120px 0 5px 20px;
+  }
+
+  .projectCard {
+    background-color: var(--themeWhite);
+    padding: 0px 2ch;
+    border-left: 8px solid var(--themeYellow);
+    border-radius: 8px;
+    margin: 15px;
+    box-shadow: 0px 5px 10px var(--themeShadow);
+    display: grid;
+    grid-template-rows: 1fr 0.5fr;
+    height: max(200px);
+    width: min(100px);
+  }
+
+  .projectText{
+    overflow-y: auto;
+  }
+
+  .announcementsHeader {
+    margin: -30px 0 12px 17px;
+  }
+
+  .trendingContent{
+    margin-bottom: 20px;
+  }
+}
